@@ -1,8 +1,8 @@
 # Finding using python to automatically find pybind11 and its dependencies (python dlls)
 string(FIND ${CMAKE_CXX_COMPILER} x86_64-w64-mingw32-g++ IS_MINGW) 
 if(IS_MINGW) #Using anaconda's python for windows
-    set(CONDA_PY_EXE "C:/Anaconda2/python")
-    set(CONDA_PY_LINKS "-LC:/Anaconda2/ -lpython27")
+    set(CONDA_PY_EXE "C:/Users/nania/.conda/envs/py2_7/python") 
+    set(CONDA_PY_LINKS "C:/Users/nania/.conda/envs/py2_7/ -lpython27")
     if(CYGWIN)
         string(REGEX REPLACE "C\:" "/cygdrive/c" CONDA_PY_EXE ${CONDA_PY_EXE})
         string(REGEX REPLACE "C\:" "/cygdrive/c" CONDA_PY_LINKS ${CONDA_PY_LINKS})
